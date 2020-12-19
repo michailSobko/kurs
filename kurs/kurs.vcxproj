@@ -19,24 +19,24 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\BaseBuilder.h" />
-    <ClInclude Include="..\..\..\Car.h" />
-    <ClInclude Include="..\..\..\Kia.h" />
-    <ClInclude Include="..\..\..\Nissan.h" />
-    <ClInclude Include="..\..\..\stdafx.h" />
-    <ClInclude Include="..\..\..\targetver.h" />
-    <ClInclude Include="..\..\..\Toyota.h" />
-    <ClInclude Include="..\..\..\VAZ.h" />
+    <ClCompile Include="BaseBuilder.cpp" />
+    <ClCompile Include="Car.cpp" />
+    <ClCompile Include="CarsBuilder.cpp" />
+    <ClCompile Include="Kia.cpp" />
+    <ClCompile Include="Nissan.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="Toyota.cpp" />
+    <ClCompile Include="VAZ.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\BaseBuilder.cpp" />
-    <ClCompile Include="..\..\..\Car.cpp" />
-    <ClCompile Include="..\..\..\CarsBuilder.cpp" />
-    <ClCompile Include="..\..\..\Kia.cpp" />
-    <ClCompile Include="..\..\..\Nissan.cpp" />
-    <ClCompile Include="..\..\..\stdafx.cpp" />
-    <ClCompile Include="..\..\..\Toyota.cpp" />
-    <ClCompile Include="..\..\..\VAZ.cpp" />
+    <ClInclude Include="BaseBuilder.h" />
+    <ClInclude Include="Car.h" />
+    <ClInclude Include="Kia.h" />
+    <ClInclude Include="Nissan.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="Toyota.h" />
+    <ClInclude Include="VAZ.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
