@@ -1,7 +1,7 @@
 #pragma once
 #include "BaseBuilder.h"
 
-//киа - содержит только переопределённые  методы
+// киа - содержит только переопределённые  методы
 class Kia : public BaseBuilder {
 public:
 	Kia();

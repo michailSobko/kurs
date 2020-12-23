@@ -8,7 +8,7 @@
 
 using namespace std;
 
-// класс-строитель
+//класс-строитель
 class BaseBuilder {
 protected:
 	Car car; // машина
