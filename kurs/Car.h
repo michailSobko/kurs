@@ -12,7 +12,7 @@ public:
 	string engineType = ""; // тип двигателя
 	double engineVolume = 0; // объём двигателя
 	string dimention = ""; // габариты
-	int year = 0; // год производства
+	int year = 0; // год прозводства
 	int doorCount = 0; // количество дверей
 	string model = ""; // можель
 	string mark = ""; // марка шин

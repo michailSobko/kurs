@@ -11,7 +11,7 @@ void Nissan::SetModel() {
 	car.model = "Nissan";
 }
 
-// меняем установку особого параметра
+//меняем установку особого параметра
 void Nissan::SetHeatingSeats() {
 	car.heatingSeats = true;
 }

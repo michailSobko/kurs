@@ -11,7 +11,7 @@ void VAZ::SetModel() {
 	car.model = "ВАЗ";
 }
 
-// меняем установку особого параметра
+//меняем установку особого параметра
 void VAZ::SetTrunkRoof() {
 	car.TrunkRoof = true;
 }

@@ -11,7 +11,7 @@ using namespace std;
 // класс-строитель
 class BaseBuilder {
 protected:
-	Car car; // машин
+	Car car; // машина
 public:
 	BaseBuilder();
 

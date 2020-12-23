@@ -6,7 +6,7 @@ Kia::Kia()
 {
 }
 
-// меняем модель
+//меняем модель
 void Kia::SetModel() {
 	car.model = "Kia";
 }
