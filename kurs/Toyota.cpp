@@ -11,7 +11,7 @@ void Toyota::SetModel() {
 	car.model = "Toyota";
 }
 
-// меняем установку особого параметра
+// меняем установку особого параметра 
 void Toyota::SetAKPP() {
 	car.AKPP = true;
 }

@@ -4,7 +4,7 @@
 #include<string>
 #include "BaseBuilder.h"
 
-// ваз - содержит только переопределённые  методы
+//  ваз - содержит только переопределённые  методы
 
 class VAZ: public BaseBuilder {
 public:

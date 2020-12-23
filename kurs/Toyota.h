@@ -1,7 +1,7 @@
 #pragma once
 #include "BaseBuilder.h"
 
-// тойота - содержит только переопределённые  методы
+// тойота - содержит только переопределённые  методы 
 class Toyota : public BaseBuilder {
 public:
 	Toyota();
