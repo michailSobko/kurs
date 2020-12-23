@@ -11,11 +11,11 @@ using namespace std;
 // класс-строитель
 class BaseBuilder {
 protected:
-	Car car; // машина
+	Car car; // машин
 public:
 	BaseBuilder();
 
-	// виртуальные методы для переопределения в нужном классе
+	// виртуальные методы для переопределения в нужном класс=
 	virtual void SetModel() {};
 	virtual void SetTrunkRoof() {};
 	virtual void SetHeatingMirrors() {};
