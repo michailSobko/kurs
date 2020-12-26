@@ -20,6 +20,9 @@ void Nissan::SetHeatingSeats() {
 bool Nissan::GetInFile(ifstream &in) {
 	car.model = "Nissan";
 	
+	if (!(in >> car.modelavto))
+		return false;
+
 	if (!(in >> car.color))
 		return false;
 
@@ -62,6 +65,7 @@ bool Nissan::GetInFile(ifstream &in) {
 // вывод 
 void Nissan::Print() {
 	cout << endl;
+	PrintModelavto();
 	PrintModel();
 	PrintColor();
 	PrintEngineType();
@@ -77,9 +81,13 @@ void Nissan::Print() {
 
 // чтение с клавиатуры
 void Nissan::Read() {
-	string color, dimention, mark, engineType;
+	string color, dimention, mark, engineType, modelavto;
 	int year, doorCount;
 	double engineVolume, VolumeTrunk;
+	
+	cout << "¬ведите модель: ";
+	cin >> modelavto;
+	SetModelavto(modelavto);
 
 	cout << "¬ведите цвет: ";
 	cin >> color;
@@ -127,7 +135,8 @@ void Nissan::PrintDifference() {
 Car Nissan::GetAndSave() {
 	Print();
 	ofstream out("nissan.txt", ios::app);
-
+	
+	out << car.modelavto << " ";
 	out << car.color << " ";
 	out << car.engineType << " ";
 	out << car.engineVolume << " ";

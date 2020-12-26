@@ -16,6 +16,7 @@ public:
 	bool GetInFile(ifstream &in);
 	void Print();
 	void Read();
+	void Edit();
 	void PrintDifference();
 	~VAZ();
 };

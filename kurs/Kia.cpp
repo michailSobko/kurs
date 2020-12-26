@@ -19,6 +19,9 @@ void Kia::SetHeatingMirrors() {
 // считывание из файла
 bool Kia::GetInFile(ifstream &in) {
 	car.model = "Kia";
+	if (!(in >> car.modelavto))
+		return false;
+
 	if (!(in >> car.color))
 		return false;
 
@@ -62,6 +65,7 @@ bool Kia::GetInFile(ifstream &in) {
 void Kia::Print() {
 	cout << endl;
 	PrintModel();
+	PrintModelavto()	;
 	PrintColor();
 	PrintEngineType();
 	PrintEngineVolume();
@@ -76,13 +80,16 @@ void Kia::Print() {
 
 // чтение с клавиатуры
 void Kia::Read() {
-	string color, dimention, mark, engineType;
+	string color, dimention, mark, engineType, modelavto;
 	int year, doorCount;
 	double engineVolume, VolumeTrunk;
 
+	cout << "¬ведите модель: ";
+	cin >> modelavto;
+	SetColor(modelavto);
+
 	cout << "¬ведите цвет: ";
 	cin >> color;
-
 	SetColor(color);
 
 	cout << "¬ведите тип двигател€: ";
@@ -126,7 +133,7 @@ void Kia::PrintDifference() {
 Car Kia::GetAndSave() {
 	Print();
 	ofstream out("kia.txt", ios::app);
-
+	out << car.modelavto << " ";
 	out << car.color << " ";
 	out << car.engineType << " ";
 	out << car.engineVolume << " ";

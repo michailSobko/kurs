@@ -10,6 +10,11 @@ BaseBuilder::~BaseBuilder()
 {
 }
 
+void BaseBuilder::SetModelavto(string modelavto)
+{
+	car.modelavto = modelavto;
+}
+
 void BaseBuilder::SetColor(string color) {
 	car.color = color;
 }
@@ -42,8 +47,12 @@ void BaseBuilder::SetVolumeTrunk(double volumeTrunk) {
 	car.VolumeTrunk = volumeTrunk;
 }
 
+void BaseBuilder::PrintModelavto() {
+	cout << "Модель " << car.modelavto << endl;
+}
+
 void BaseBuilder::PrintModel() {
-	cout << "Модель " << car.model << endl;
+	cout << "Марка " << car.model << endl;
 }
 
 void BaseBuilder::PrintColor() {

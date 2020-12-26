@@ -19,6 +19,9 @@ void Toyota::SetAKPP() {
 // считывание из файла
 bool Toyota::GetInFile(ifstream &in) {
 	car.model = "Toyota";
+	if (!(in >> car.modelavto))
+		return false;
+
 	if (!(in >> car.color))
 		return false;
 
@@ -62,6 +65,7 @@ bool Toyota::GetInFile(ifstream &in) {
 void Toyota::Print() {
 	cout << endl;
 	PrintModel();
+	PrintModelavto();
 	PrintColor();
 	PrintEngineType();
 	PrintEngineVolume();
@@ -76,9 +80,13 @@ void Toyota::Print() {
 
 // чтение с клавиатуры
 void Toyota::Read() {	
-	string color, dimention, mark, engineType;
+	string color, dimention, mark, engineType,modelavto;
 	int year, doorCount;
 	double engineVolume, VolumeTrunk;
+	
+	cout << "¬ведите модель: ";
+	cin >> modelavto;
+	SetModelavto(modelavto);
 
 	cout << "¬ведите цвет: ";
 	cin >> color;
@@ -127,6 +135,7 @@ Car Toyota::GetAndSave() {
 	Print();
 	ofstream out("toyota.txt", ios::app);
 
+	out << car.modelavto << " ";
 	out << car.color << " ";
 	out << car.engineType << " ";
 	out << car.engineVolume << " ";

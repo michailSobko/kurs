@@ -30,11 +30,15 @@ public:
 	void SetYear(int yesr);
 	void SetDoorCount(int doorCount);
 	void SetMark(string mark);
+	void SetModelavto(string modelavto);
 	void SetVolumeTrunk(double volumeTrunk);
+
+	
 
 	virtual void PrintDifference() = 0; // функция вывода особенности
 
 	// функции вывода параметров
+	void PrintModelavto();
 	void PrintModel();
 	void PrintColor();
 	void PrintEngineType();

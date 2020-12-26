@@ -19,8 +19,12 @@ void VAZ::SetTrunkRoof() {
 // считывание из файла
 bool VAZ::GetInFile(ifstream &in) {
 	car.model = "ВАЗ";
+	if (!(in >> car.modelavto))
+		return false; 
+
 	if (!(in >> car.color))
 		return false;
+
 
 	if (!(in >> car.engineType))
 		return false;
@@ -62,6 +66,7 @@ bool VAZ::GetInFile(ifstream &in) {
 void VAZ::Print() {
 	cout << endl;
 	PrintModel();
+	PrintModelavto();
 	PrintColor();
 	PrintEngineType();
 	PrintEngineVolume();
@@ -76,13 +81,16 @@ void VAZ::Print() {
 
 // чтение с клавиатуры
 void VAZ::Read() {
-	string color, dimention, mark, engineType;
+	string color, dimention, mark, engineType ,modelavto;
 	int year, doorCount;
 	double engineVolume, VolumeTrunk;
+	
+	cout << "Введите Модель: ";
+	cin >> modelavto;
+	SetModelavto(modelavto);
 
 	cout << "Введите цвет: ";
 	cin >> color;
-
 	SetColor(color);
 
 	cout << "Введите тип двигателя: ";
@@ -127,7 +135,7 @@ void VAZ::PrintDifference() {
 Car VAZ::GetAndSave() {
 	Print();
 	ofstream out("ВАЗ.txt", ios::app);
-
+	out << car.modelavto << " ";
 	out << car.color << " ";
 	out << car.engineType << " ";
 	out << car.engineVolume << " ";
@@ -145,7 +153,50 @@ Car VAZ::GetAndSave() {
 
 	return car;
 }
+void VAZ::Edit() {
+	string color, dimention, mark, engineType, modelavto;
+	int year, doorCount;
+	double engineVolume, VolumeTrunk;
+	cout << "Введите марку: ";
+	cin >> modelavto;
+	SetModelavto(modelavto);
 
+	cout << "Введите цвет: ";
+	cin >> color;
+
+	SetColor(color);
+
+	cout << "Введите тип двигателя: ";
+	cin >> engineType;
+	SetEngineType(engineType);
+
+	cout << "Введите объём двигателя: ";
+	cin >> engineVolume;
+	SetEngineVolume(engineVolume);
+
+	cout << "Введите габариты: ";
+	cin >> dimention;
+	SetDimention(dimention);
+
+	cout << "Введите год выпуска: ";
+	cin >> year;
+	SetYear(year);
+
+	cout << "Введите количество дверей: ";
+	cin >> doorCount;
+	SetDoorCount(doorCount);
+
+	cout << "Введите марку шин: ";
+	cin >> mark;
+	SetMark(mark);
+
+	cout << "Введите объём багажника: ";
+	cin >> VolumeTrunk;
+	SetVolumeTrunk(VolumeTrunk);
+
+	SetModel();
+	SetTrunkRoof();
+}
 VAZ::~VAZ()
 {
 }

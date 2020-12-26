@@ -8,13 +8,14 @@ using namespace std;
 // машина
 class Car {
 public:
+	string modelavto = ""; // модель 
 	string color = ""; // цвет
 	string engineType = ""; // тип двигателя
 	double engineVolume = 0; // объём двигателя
 	string dimention = ""; // габариты
 	int year = 0; // год прозводства
 	int doorCount = 0; // количество дверей
-	string model = ""; // можель
+	string model = ""; // марка
 	string mark = ""; // марка шин
 	double VolumeTrunk = 0; // объём багажника
 
